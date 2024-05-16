@@ -1,348 +1,703 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
-* {
+
+* { /*zera todas as bordas do site*/
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+}
+
+:root{ /*cores*/
+    --lime: #00FF00;
+    --gray1: #a39797;
+    --DarkMagenta: #8B008B;
+    --Red: #FF0000; 
+    --navajo: #FFDEAD; 
+    --burly: #DEB887;
+    --white: #FFFFFF;
+    --cornsilk: #FFF8DC;
+    --wheat: #F5DEB3;
+    --blanched: #FFEBCD;
+    --crimson: #DC143C;
+    --bisque: #FFE4C4;
+    --black: #000000;
+    --chocolate: #D2691E;
+    --sienna: #A0522D;
+    --saddlebrown: #8B4513;
+    --darkred: #8B0000;
+    --steelblue: #4682B4;
+    --dimgray: #696969;
+    --lightslategray: #778899;
+    --silver: #C0C0C0;
+    --gray: #808080;
+    --Dimgray: #696969;
+    --gold: #FFD700;
     }
 
-    :root{
-        --lime: #00FF00;
-        --gray1: #a39797;
-        --DarkMagenta: #8B008B;
-        --Red: #FF0000;
-        --navajo: #FFDEAD;
-        --burly: #DEB887;
-        --white: #FFFFFF;
-        --cornsilk: #FFF8DC;
-        --wheat: #F5DEB3;
-        --blanched: #FFEBCD;
-        --crimson: #DC143C;
-        --bisque: #FFE4C4;
-        --black: #000000;
-        --chocolate: #D2691E;
-        --sienna: #A0522D;
-        --saddlebrown: #8B4513;
-        --darkred: #8B0000;
-        --steelblue: #4682B4;
-        --dimgray: #696969;
-        --lightslategray: #778899;
-        --silver: #C0C0C0;
-        --gray: #808080;
-        --Dimgray: #696969;
-        --gold: #FFD700;
+@media (max-width: 1920px){/*MEDIA DE RESOLUÇÃO PRINCIPAL DO SITE LARICCA*/
+
+    /*GERAL*/
+    .link-header { /*CAIXA DOS ÍCONES E LINKS DO HEADER*/
+        display: flex; /*alinha os itens na horizontal*/
+        justify-content: space-between; /*os itens são distribuídos igualmente no espaço disponível*/
+        font-size: 19px;; /*altera o tamanho do texto*/
+        list-style: none; /*altera o estilo da <li>*/
+        cursor: pointer; /*transforma o ponteiro do mouse em uma mão clicando*/
+        color: var(--DarkMagenta); /*muda a cor do texto*/
+        
+        margin-bottom: 20px; /*ajusta a margem de baixo*/
+                                                               
     }
-  
-/*GERAL*/
-     a { /*links*/
-        
-        text-decoration: none;
-        color: black;
-        margin: 8px;
-        font-size: 20px;
-        text-transform: uppercase;}
-        
-.link-header { /*links | header*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 19px;;
-    list-style: none;
-    cursor: pointer;
-    background-color: var(--);
-    color: var(--burly);
-justify-content: center;}
 
-        .link-header img {/*imagens do link header*/
-    width: 60px;}
+a { /*LINKS*/  
+    text-decoration: none; /*ajusta a decoração do texto*/
+    color: var(--black); /*muda a cor do texto*/
+    margin: 8px; /*ajusta as margens dos 4 lados*/
+    font-size: 20px; /*altera o tamanho do texto*/
+    text-transform: uppercase; /*deixa o texto em maiúsculo*/
+}
+.lista-header1{
+display: flex;
+margin-left: auto;
+align-items: end;
+margin-bottom: 340px;
+gap: 80px;
+}
 
-    .lista img { /*imagens da lista no link header*/
-        border: outset var(--black) 3px;
-        margin: 15px;
-        border-radius: 10px;
-        padding: 5px;
-    background-color: var(--white);}
-    
-.topo-do-site{ /*header*/
-    display: flex;
-    background-image: url(fundo-site-2.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-   background-color: var(--silver);
-height: 350px;
-justify-content: center;}
+.lista-header1 img {
+max-height: 60px;
+}
 
-.topo-do-site img { /*banner do header*/
-margin: -60px;
-max-width: 350px;
-height: 400px;}
- 
-.corpo { /*principal*/
-    background-color: var(--cornsilk);
-    background-size: 100% 120%;
-    background-repeat: no-repeat;}
+li { /*LISTAS*/
+list-style: none; /*altera o estilo da <li>*/
+}
 
+.link-header img {/*IMAGENS NO LINK HEADER*/
+    width: 60px; /*ajusta a largura da imagem*/
+}
+.lista img { /*IMAGENS DA LISTA DO LINK HEADER**/
+    border: outset var(--black) 3px; /*cria uma borda com cor gradiante*/
+    margin: 15px; /*ajusta as margens dos 4 lados*/
+    border-radius: 10px; /*ajusta a curvatura os cantos*/
+    padding: 5px; /*afasta para todos os lados*/
+    background-color: var(--white); /*muda a cor do background*/
 
-span { /*preços*/
-    margin-right: 10px;
-    font-size: 25px;
-    font-family: "Sedan", cursive;
-    margin: auto;}
+}
+.topo-do-site{ /*CABEÇALHO | HEADER*/
+    display: flex; /*alinha os itens na horizontal*/
+    background-image: url(fundo-site-2.png); /*insere uma imagem de fundo*/
+    background-size: 100% 100%; /*ajusta a altura e largura da imagem de fundo ou do site*/
+    background-repeat: no-repeat; /*impede a repetição da imagem ou cor de fundo*/
+   background-color: var(--silver); /*altera a cor do background*/
+    height: 350px; /*altera a altura da imagem*/
+    justify-content: center; /*alinha os itens no centro do flex*/
+}
+.topo-do-site img { /*BANNER NO HEADER*/
+margin: -60px; /*ajusta as margens nos 4 lados*/
+max-width: 350px; /*define a largura máxima da imagem*/
+height: 400px; /*ajusta a altura da imagem*/
+}
 
-.stronger-pratos{/*nome dos pratos no link header*/
-    margin-left: 24px;}
-.stronger-home{/*nome da home no link header*/
-margin-left: 27px;}
-.stronger-bebida{/*nome das bebidas no link header*/
-margin-left: 18px;}
-.stronger-sobremesa{/*nome das sobremesas no link header*/
-    margin-left: 5px;}
-.stronger-petisco{/*nome dos petiscos no link header*/
-margin-left: 18px;}
-.stronger-carrinho{
-margin-left: 15px;}
-.stronger-contato{
-margin-left: 20px;}
-.stronger-quem{
-margin-left: 4px;}
+.banner-header {
+    margin-left: 850px;
+}
+.corpo { /*CORPO DO SITE*/
+    background-color: var(--cornsilk); /*altera a cor do background*/
+    background-size: 100% 120%; /*ajusta a altura e largura da imagem de fundo ou do site*/
+    background-repeat: no-repeat; /*impede a repetição da imagem ou cor de fundo*/
+}
+span { /*PREÇOS DO SITE*/
+    margin-right: 10px; /*ajusta a margem direita*/
+    font-size: 25px; /*altera o tamanho do texto*/
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    margin: auto; /*ajusta as margens dos 4 lados*/
+}
+.stronger-pratos{/*NOME DOS PRATOS NO LINK HEADER*/
+    margin-left: 24px;
+}
+.stronger-home{/*NOME DA HOME NO LINK HEADER*/
+margin-left: 27px;
+}
+.stronger-bebida{/*NOME DAS BEBIDAS NO LINK HEADER*/
+margin-left: 18px;
+}
+.stronger-sobremesa{/*NOME DAS SOBREMESAS NO LINK HEADER*/
+    margin-left: 3px;
+    margin-left: 5px;
+}
+.stronger-petisco{/*NOME DOS PETISCOS NO LINK HEADER*/
+margin-left: 18px;
+}
+.stronger-carrinho{/*NOME DO CARRINHO NO LINK HEADER*/
+margin-left: 15px;
+}
+.stronger-contato{/*NOME DO CONTATO NO LINK HEADER*/
+margin-left: 20px;
+}
+.stronger-quem{/*NOME DO "SOBRE" NO LINK HEADER*/
+margin-left: 4px;
+}
+.stronger-teste{
+margin-left: 30px; /*ajusta a margem da esquerda*/
+}
 
-.hr1 { /*linha do rodape*/
+.rodape { /*RODAPÉ TOTAL*/
+    background-color: var(--gold); /*altera a cor do background*/
+    font-family: "DM Serif Display" , cursive; /*altera a fonte do texto*/
+    font-size: 25px; /*altera o tamanho do texto*/
+    justify-content: space-between; /*os itens são distribuídos igualmente no espaço disponível*/
+    text-align: center; /*alinha o texto no centro do site*/
+    background-size: 100% 100%; /*altera a cor do background*/
+}
+.hr1 { /*LINHA DO RODAPE*/
     width: 50%;
-    margin: auto;}
+    margin: auto;
+}
+.paragrafo-rodape{ /*ESCRITA DOS DIREITOS AUTORAIS*/
+  background-color: var(--gold); /*muda a cor do background*/
+}
+.siga-a-gente{ /*CLASSE DAS REDES SOCIAIS NO RODAPÉ*/
+font-size: 25px; /*altera o tamanho do texto*/
+}
+.div-rodape { /*DIVISÃO QUE MEXE NO RODAPÉ COMPLETO*/
+    display: flex; /*alinha os itens na horizontal*/
+    max-width: 100%; /*define a largura máxima da imagem*/
+    gap: 110px; /*define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas */
+    background-color: var(--gold); /*define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas */
+}
+.rodape-lista4 {/*LISTA DO RODAPÉ*/
+    gap: 990px; /*define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas */
+}   
+.rodape-cartao { /*FORMAS DE PAGAMENTO NO RODAPÉ*/
+    display: flex; /*alinha o elementos na horizontal*/
+    gap: 80px; /*dá um espaçamento entre os itens*/
+    justify-content: center; /*posiciona o item no centro do flex*/
+}
+.titulo3-rodape { /*TÍTULOS DO RODAPÉ*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-family: "DM Serif Display", cursive; /*muda a fonte do texto*/
+    color: var(--black); /*muda a cor do texto*/
+    text-align: center; /*alinha os textos no centro do site*/ /*muda a cor do texto*/
+    margin: 25px; /*ajusta as margens dos 4 cantos*/
+    font-family: "DM Serif Display", cursive; /*muda a fonte do texto*/
+}
+p { /*PARÁGRAFOS*/
+    color: var(--black); /*muda a cor do texto*/
+}
+    /*INDEX*/
+.titulo-principal { /*TÍTULO DO INDEX*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-size: 50px; /*altera o tamanho do texto*/
+    font-family: "DM Serif Display", cursive; /*muda a fonte do texto*/
+    margin: 10px;
+}
+hr { /*LINHA ENTRE AS DIVS E OS MENUS (sem classe)*/
+    border-bottom: solid 1px var(--black);/*altera a borda de baixo*/
+}
 
-/*INDEX*/
-.titulo-principal { /*titulo do index*/
-    text-align: center;
-    font-size: 50px;
-    font-family: "Sedan", cursive;
-    margin: 10px;}
-
-    hr { /*espaço entre as divs dos menus (sem classe)*/
-        border-bottom: solid 2px var(--black);}
-
-button { /*botões do index*/
-        height: 50px; 
-        width: 100px;
-        border-radius: 10px;
-        margin: 5px;
-        cursor: pointer; 
-        font-size: 20px; 
-        font-family: "Overpass", cursive;
-    margin-left: 50px;}
-
-    .hr2 {
-       
-       
+.siga-a-gente{ /*CLASSE DAS REDES SOCIAIS NO RODAPÉ*/
+font-size: 25px; /*altera o tamanho do texto*/
+}
+.div-rodape { /*DIVISÃO QUE MEXE NO RODAPÉ COMPLETO*/
+    display: flex; /*alinha os itens na horizontal*/
+    max-width: 100%; /*define a largura máxima da imagem*/
+    gap: 110px; /*define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas */
+    background-color: var(--gold); /*define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas */
+}
+.rodape-lista4 {/*LISTA DO RODAPÉ*/
+    gap: 990px; /*define o tamanho do espaço entre as linhas e entre as colunas no flexbox, grade ou layout de múltiplas colunas */
+}   
+.rodape-cartao { /*FORMAS DE PAGAMENTO NO RODAPÉ*/
+    display: flex; /*alinha o elementos na horizontal*/
+    gap: 80px;
+    justify-content: center;
+}
+.titulo3-rodape { /*TÍTULOS DO RODAPÉ*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-family: "DM Serif Display", cursive; /*muda a fonte do texto*/
+    color: var(--black); /*muda a cor do texto*/
+    text-align: center; /*alinha os textos no centro do site*/ /*muda a cor do texto*/
+    margin: 25px; /*ajusta as margens dos 4 cantos*/
+    font-family: "DM Serif Display", cursive; /*muda a fonte do texto*/
+}
+p { /*PARÁGRAFOS*/
+    color: var(--black); /*muda a cor do texto*/
+}
+    /*INDEX*/
+.titulo-principal { /*TÍTULO DO INDEX*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-size: 50px; /*altera o tamanho do texto*/
+    font-family: "DM Serif Display", cursive; /*muda a fonte do texto*/
+    margin: 10px;
+}
+hr { /*LINHA ENTRE AS DIVS E OS MENUS (sem classe)*/
+    border-bottom: solid 1px var(--black);/*altera a borda de baixo*/
+}
+button { /*BOTÕES DO INDEX*/
+    height: 50px; /*ajusta a altura*/
+    width: 100px; /*ajusta a largura*/
+    border-radius: 10px; /*ajusta a curvatura das bordas*/
+    margin: 5px; /*ajusta as margens dos 4 cantos da caixa*/
+    cursor: pointer; /*transoforma o ponteiro do mouse em uma mão clicando*/
+    font-size: 20px; /*altera o tamanho do texto*/ 
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    margin-left: 50px; /*ajusta a margem da esquerda*/
+}
+.titulo2 { /*TÍTULO DE SUGESTÕES DO INDEX (não o sugestão container)*/
+    text-align: center; /*alinha o texto no centro do site*/
+    border-radius: 10px; /*ajusta a curvatura das bordas nos cantos*/
+    margin: 25px; /*ajusta as margens dos 4 lados*/
+    padding: 5px; /*empurra todos os lados*/
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    font-size: 50px; /*altera o tamanho do texto*/
+}
+.titulo3 { /*NOMES DAS SUGESTÕES NO INDEX*/
+    background-color: var(--black); /*altera a cor do background*/
+    text-align: center; /*alinha o texto no centro do site*/
+    color: var(--white); /*altera a cor do texto*/
+    border-radius: 10px; /*ajusta a curvatura das bordas*/
+    margin: 25px; /*ajusta as margens dos 4 lados*/
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    border: outset var(--black) 3px; /*cria uma borda com cor gradiante*/
+} 
+.input-botao { /*BOTÕES DO INDEX*/
+margin-left: 90px; /*ajusta a margem da esquerda*/
+}
+.sugestao-container { /*SECTIONS DO INDEX*/
+    display: grid; /*alinha os itens em grade*/
+    grid-template-columns: repeat(auto-fill, minmax(320px,1fr )); /*ajusta o display grid*/
+    margin: 10px; /*ajusta as margens dos 4 lados*/
+}
+.sugestao-container img { /*IMAGENS DAS SECTIONS DO INDEX*/
+    width: 310px; /*ajusta a largura da imagem*/
+    margin-left: 35px; /*ajusta a margem da esquerda*/
+    border-radius: 20px; /*ajusta a curvatura das bordas*/
+    border: outset var(--gold) 5px; /*cria uma borda com cor gradiante*/
+}
+input { /*CAIXAS DE TEXTO DO INDEX*/
+    height: 30px; /*ajusta a altura da imagem*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-size: 16px; /*altera o tamanho do texto*/
+    margin: auto; /*ajusta as margens automaticamente*/
+}
+/*HOVER*/
+.menu-container img:hover { /*ANIMAÇÃO DAS IMAGENS DOS MENUS*/
+    transition: all; /*permite transição para todos os itens selecionados*/
+    transform: scale(1.1); /*ajusta a transição*/
+    }
+    .botao:hover { /*ANIMAÇÃO DOS BOTÕES NOS MENUS*/
+        cursor: pointer; /*transforma o ponteiro do mouse em uma mão clicando*/
+     background-color: var(--gold); /*altera a cor do background*/
+    }
+    .lista img:hover { /*ANIMAÇÃO DAS IMAGENS NA LISTA*/
+        transition: all; /*permite transição para todos os itens selecionados*/
+        transform: scale(1.2); /*ajusta a transição*/
+        background-color: var(--gold); /*altera a cor do background*/
+    }  
+    .links-lista:hover { /*ANIMAÇÃO DOS NOMES DOS LINKS NA LISTA*/
+    color: var(--chocolate); /*altera a cor do texto*/
     }
 
- .titulo2 { /*titulo secundário do index*/
-text-align: center;
-border-radius: 10px;
-margin: 25px;
-padding: 5px;
-font-family: "Sedan", cursive;
-font-size: 50px;}
+    button:hover{ /*BOTÕES DO CARRINHO (REMOVER)*/
+        background-color: var(--chocolate);
+    }
 
-.titulo3 { /*nomes das sugestões no index*/
-    background-color: var(--black);
-    text-align: center;
-    color: var(--white);
-    border-radius: 10px;
-    margin: 25px;
-    font-family: "Sedan", cursive;
-    border: outset var(--black) 3px;}
-    
+/*MENUS*/
+.alcool { /*SECTIONS DE TIPOS DE BEBIDAS NO MENU DRINKS*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-size: 40px; /*altera o tamanho do texto*/
+    color: var(--chocolate); /*altera a cor do texto*/
+    margin: 40px; /*ajusta as margens dos 4 lados*/
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    color: var(--burly); /*altera a cor do texto*/
+    margin: 40px; /*ajusta as margens dos 4 lados*/
+}
+.menu-container { /*SECTIONS DOS MENUS*/
+    display: flex; /*alinha os itens na horizontal*/
+    flex-direction: column; /*alinha os itens na vertical dentro do flex*/
+}
+.menu-container img { /*IMAGENS DAS SECTIONS DOS MENUS*/
+    width: 510px; /*ajusta a largura da imagem*/
+    margin-left: 35px; /*ajusta a margem da esquerda*/
+    border-radius: 20px; /*ajusta a curvatura das bordas*/
+    border: outset var(--gold) 10px; /*cria uma borda com cor gradiante*/
+}
+.hr { /*LINHA ENTRE AS DIVS DOS MENUS*/
+    margin: 40px; /*ajusta as margens dos 4 lados*/
+    background-color: var(--gold); /*altera a cor do background*/
+    width: 100%;  /*ajusta a largura da imagem*/
+    margin-left: 0px; /*ajusta a margem da esquerda*/
+    border: outset 2px var(--gold); /*cria uma borda com cor gradiante*/
+}
+.titulodrink { /*TÍTULO DO MENU DE DRINKS*/
+    text-align: center; /*alinha o texto no centro do site*/
+    margin: 25px; /*ajusta as margens dos 4 lados*/
+    padding: 5px; /*empurra para todos os lados*/
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    color: var(--black); /*altera a cor do texto*/
+    font-size: 60px; /*altera o tamanho do texto*/
+}
+.input {/*CAIXAS DE TEXTO DOS MENUS*/
+    height: 50px; /*ajusta a altura da imagem*/
+    width: 100px; /*ajusta a largura da imagem*/
+    border-radius: 10px; /*ajusta a curvatura das bordas*/
+    text-align: center; /*alinha o texto no centro do site*/
+    font-size: 40px; /*altera o tamanho do texto*/
+    margin-right: 5px; /*ajusta a margem da direita*/
+}
+.botao {/*BOTÕES DOS MENUS*/
+    height: 50px; /*ajusta a altura da imagem*/
+    width: 100px; /*ajusta a largura da imagem*/
+    border-radius: 10px; /*ajusta a curvatura das margens*/
+    margin: auto; /*ajusta as margens automaticamente*/
+    cursor: pointer;  /*transforma o ponteiro do mouse em uma mão clicando*/
+    font-size: 20px; /*altera o tamanho do texto*/
+    font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+    margin-left: 0px; /*ajusta a margem da esquerda*/
+}
+.div-container { /*DIV DOS MENUS*/
+    display: flex; /*alinha os itens na horizontal*/
+}
+.div-container img { /*DIV DAS IMAGENS DOS MENUS*/
+    margin-left: 30px; /*ajusta a margem da esquerda*/
+}
+.descricao-menu { /*DESCRIÇÃO DOS PRATOS DOS MENUS*/
+    font-family: "DM Serif Display" , cursive; /*altera a fonte do texto*/
+    font-size: 40px; /*altera o tamanho do texto*/
+    /*margin: 150px; ----> /*em observação
+    margin-right: 20px;*/
+    margin: auto; /*ajusta as margens automaticamente*/
+} 
+.ingredientes{ /*INGREDIENTES NOS MENUS*/
+    font-size: 25px; /*altera o tamanho do texto*/
+    padding: 1px; /*empurra para todos os lados*/
+    margin: auto; /*ajusta as margens automaticamente*/
+    margin-bottom: 20px; /*ajusta a margem de baixo*/
+font-family: "DM Serif Display", cursive; /*altera a fonte do texto*/
+}
+/*SOBRE*/
+.titulo-sobre { /*TITULO SOBRE*/
+    height: 100px;  /*ajusta a altura da imagem*/
+    display: grid; /*alinha os itens em grade*/
+    background-color: white; /*altera a cor do background*/
+    color:black; /*altera a cor do texto*/
+    text-align: center; /*alinha o texto no centro do site*/
+   }
+   .titulo-sobre1 { /*BÍBLIA DO SOBRE*/
+       background-color: white; /*altera a cor do background*/
+       color: black; /*altera a cor do texto*/
+       text-align: center; /*alinha o texto no centro do site*/
+       height: 100px; /*ajusta a altura da imagem*/
+   }
+   .titulo-sobre2 {/*BÍBLIA DO SOBRE2*/  
+       background-color: white; /*altera a cor do background*/
+       color: black; /*altera a cor do texto*/
+       text-align: center; /*alinha o texto no centro do site*/
+       height: 100px; /*ajusta a altura da imagem*/
+   }
+   .titulo-sobre3 {/*BÍBLIA DO SOBRE3*/
+       text-align: center; /*alinha o texto no centro do site*/
+       color: black;} /*altera a cor do texto*/
+   
+ /*USER*/
+ .contact { /*CAIXA DE CONTATO*/
+    background-color: var(--burly); /*altera a cor do background*/
+    padding: 30px; /*empurra para todos os lados*/
+    max-width: 600px; /*define a largura máxima da imagem*/
+    margin-right: auto; /*ajusta a margem da direita automaticamente*/
+    margin-left: auto; /*ajusta a margem da esquerda automaticamente*/
+    margin-bottom: 20px;  /*ajusta a margem de baixo*/
+    border-radius: 10px; /*ajusta a curvatura das bordas*/
+}
+.contact-label { /*POSIÇÃO DAS CAIXAS DE TEXTO DO CONTATO*/
+    display: block; /*alinha os itens na vertcial / em blocos*/
+    margin-bottom: 20px; /*ajusta a margem de baixo*/
+    color: var(--black); /*altera a cor do texto*/
+    font-family: "DM Serif Display",cursive; /*altera a fonte do texto*/
+}
+.button-label { /*BOTÃO DO USER*/
+   margin-left: auto; /*ajusta a margem da esquerda automaticamente*/
+   margin-right: auto; /*ajusta a margem da direita automaticamente*/
+}
+.contact-field {/*CAIXA DE TEXTO*/
+    display: block; /*alinha os itens na vertical / em blocos*/
+    width: 100%; /*ajusta a largura da imagem*/
+    height: 30px;  /*ajusta a altura da imagem*/
+    font-size: 16px;  /*altera o tamanho do texto*/
+    padding-left: 10px; /*empurra para a direita*/
+    border: none; /*tira as bordas*/
+}
+/*TESTE CARRINHO*/
+.carrinho-container {
+    text-align: center; /*alinha o texto no centro do site*/
+   /* background-color: var(--black); /*altera a cor do background*/
+    color: var(--darkred); /*altera a cor do texto*/
+
+    display: flex; /*alinha os itens na horizontal*/
+    justify-content: center; /*alinha os itens dentro do flex*/
+ margin: 50px;
+}
+.div-h2 {
+display: flex;
+justify-content: center;
+}
+.carrinho-botao-finalizar{
+    font-family: "DM Serif Display", cursive;
+    display: flex;
+justify-content: center;
+
+} 
 .input-botao { /*botões do index*/
-margin-left: 90px;}
-
+margin-left: 90px;
+}
 .sugestao-container { /*sessão | index*/
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px,1fr ));
-    margin: 10px;}
-
+    margin: 10px;
+}
 .sugestao-container img { /*imagem | sessão | index*/
     width: 310px;
     margin-left: 35px;
     border-radius: 20px;
-    border: outset var(--gold) 5px;}
-
-    input { /*caixas de texto do index*/
-        height: 30px;
-text-align: center;
-           font-size: 15px;
-           margin: auto;}
-
+    border: outset var(--gold) 5px;
+}
+input { /*caixas de texto do index*/
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+}
 /*HOVER*/
-    button:hover { /*localizado no index*/ /*muda a cor de fundo dos botões*/
-        background-color: var(--dimgray);}
-
 .menu-container img:hover { /*localizado nos menus*/ /*gira as imagens*/
-transition: all 0.5s;
-   transform: scale(1.1);}
-
+    transition: all;
+    transform: scale(1.1);
+    }
     .botao:hover {
         cursor: pointer;
-        transition: all 0.5s;
-        transform: scale(1.3);}
-    
+     background-color: var(--gold);
+    }
     .lista img:hover { /*animação das imagens nos links*/
         transition: all;
         transform: scale(1.2);
-background-color: var(--gold);}
-    
-.links-lista:hover {
-color: var(--chocolate);
-}
-
+        background-color: var(--gold);
+    }  
+    .links-lista:hover {
+    color: var(--chocolate);
+    }
 /*MENUS*/
 .alcool { /*sessões de drinks | menus*/
     text-align: center;
     font-size: 40px;
+    color: var(--chocolate);
+    margin: 40px;
+    font-family: "DM Serif Display", cursive;
     color: var(--dimgray);
-    margin: 40px;}
-        
+    margin: 40px;
+}
 .menu-container { /*Sessão | menus*/
     display: flex;
-     flex-direction: column;}
- 
+    flex-direction: column;
+}
 .menu-container img { /*imagem | sessão | menus*/
     width: 510px;
     margin-left: 35px;
     border-radius: 20px;
-    border: outset var(--black) 10px;}
-
+    border: outset var(--gold) 10px;
+}
 .hr { /*espaços entre as divs dos menus*/
     margin: 40px;
-    height: 9px;
-    background-color: var(--black);
+    background-color: var(--gold);
     width: 100%; 
-    border-radius: 20px;
-    border: outset 2px var(--crimson);
-    margin-left: 0px;}
-
+    margin-left: 0px;
+    border: outset 2px var(--gold);
+}
 .titulodrink { /*Usado no menu de drinks*/
     text-align: center;
     margin: 25px;
     padding: 5px;
-    font-family: "Sedan", cursive;
+    font-family: "DM Serif Display", cursive;
     color: var(--black);
-    font-size: 60px;}
-
+    font-size: 60px;
+}
 .input {/*caixas de texto dos menus*/
     height: 50px; 
     width: 100px;
- border-radius: 10px;
- text-align: center; 
- font-size: 40px;
-margin-right: 5px;}
-
-.botao { /*botões dos menus*/
+    border-radius: 10px;
+    text-align: center; 
+    font-size: 40px;
+    margin-right: 5px;
+}
+.botao {/*botões dos menus*/
     height: 50px; 
     width: 100px;
     border-radius: 10px;
     margin: auto;
     cursor: pointer; 
     font-size: 20px; 
-    font-family: "Sedan", cursive;
-margin-left: 0px;}
-
+    font-family: "DM Serif Display", cursive;
+    margin-left: 0px;
+}
 .div-container { /*div das imagens dos menus*/
-display: flex;
-flex-direction: initial;}
-
-    .div-container img { /*usado para tirar a margin-left das imagens do menu*/
-        margin-left: 30px;}
-    
-
+    display: flex;
+    flex-direction: initial;
+}
+.div-container img { /*usado para tirar a margin-left das imagens do menu*/
+    margin-left: 30px;
+}
 .descricao-menu { /*descrição dos pratos dos menus*/
-font-family: "sedan" , cursive;
-font-size: 40px; 
-/*margin: 150px; ----> /*em observação
-margin-right: 20px;*/
-margin: auto;}
-
-/*
-.button-input { 
-margin-right: 600px;} */ /*---> COMENTADO NO HTML*/ /*inutilizado*/
-     
+    font-family: "DM Serif Display" , cursive;
+    font-size: 40px; 
+    /*margin: 150px; ----> /*em observação
+    margin-right: 20px;*/
+    margin: auto;
+} 
 .ingredientes{ /*parágrafo dos menus*/
-font-size: 25px;
-padding: 1px;
-margin: auto;
-margin-bottom: 20px;}
-
+    font-size: 25px;
+    padding: 1px;
+    margin: auto;
+    margin-bottom: 20px;
+font-family: "DM Serif Display", cursive;
+}
 
 /*SOBRE*/
 .titulo-sobre { /*Título sobre*/
- height: 100px;  
- display: grid; 
- background-color: white;
- color:black; 
- text-align: center;
- 
-}
-.titulo-sobre1 {
+    height: 100px;  
+    display: grid; 
     background-color: white;
-    color: black;
+    color:black; 
     text-align: center;
-    height: 100px;
-
-}
-.titulo-sobre2 {
-    background-color: white;
-    color: black;
-    text-align: center;
-    height: 100px;
-
-}
-.titulo-sobre3 {
-    text-align: center;
-    color: black;}
+    
+   }
+   .titulo-sobre1 { /*bíblia do sobre*/
+       background-color: white;
+       color: black;
+       text-align: center;
+       height: 100px;
+   
+   }
+   .titulo-sobre2 {/*bíblia do sobre*/
+       background-color: white;
+       color: black;
+       text-align: center;
+       height: 100px;
+   
+   }
+   .titulo-sobre3 {/*bíblia do sobre*/
+       text-align: center;
+       color: black;}
+   
 
  /*USER*/
- .contact {
-    background-color: var(--Dimgray);
+ .contact { /*caixa de contato*/
+    background-color: var(--burly);
     padding: 30px; 
     max-width: 600px;
     margin-right: auto; 
     margin-left: auto; 
-    margin-bottom: 20px;  }
-
- .contact-label {
+    margin-bottom: 20px;  
+    border-radius: 10px;
+}
+.contact-label { /*caixas das caixas de texto*/
     display: block; 
     margin-bottom: 20px; 
-    color: var(--black);}
+    color: var(--black);
+    font-family: "DM Serif Display",cursive;
 
- /*carrinho teste*/
- .carrinho-container {
+}
+.button-label {
+   margin-left: auto;
+   margin-right: auto;
+}
+.contact-field {/*caixa de texto*/
+    display: block; 
+    width: 100%;
+    height: 30px;  
+    font-size: 16px;  
+    padding-left: 10px; 
+    border: none; 
+}
+/*carrinho teste*/
+.carrinho-container {
     text-align: center;
     background-color: var(--black);
-    color: var(--darkred);}
- 
+    color: var(--darkred);
+}
+}
 
- /*RODAPÉ*/
- .rodape { /*rodape geral*/
-    background-color: var(--dimgray);
-    font-family: "sedan" , cursive;
-    font-size: 25px;
-    color: var(--white);
-    justify-content: space-between;
-    text-align: center;
-background-image: url(fund-site-oficial.png);
-background-size: 100% 100%;}
+/*MEDIA 320px*/
+@media (max-width: 320px){ /*media com responsividade 320*/
 
-.titulo3-rodape { /*titulo do rodapé*/
-    text-align: center;
-    color: var(--white);
-    margin: 25px;
-    font-family: "Sedan", cursive;
-    color: var(--black);}
+    /*GERAL*/
+.topo-do-site img { /*banner*/
+    margin: 0px; /*mexe na margem do elemento*/
+    max-width: 200px; /*define a largura máxima da imagem*/
+    height: 300px; /*define a altura máxima da imagem*/
+}
+    /*INDEX*/
+.link-header {
+display: flex; /*alinha os elementos na horizontal*/
+flex-flow: row wrap; /*flex em grade*/
 
-p { /*parágrafos*/
-    color: var(--black);}
- 
-.sobre1 {
-    background-color: black;
-    color: white;
-}   
+}
+.sugestao-container img { /*imagens das sessões*/
+    margin: 0px; /*zera a margem dos 4 cantos do elemento*/
+}.sugestao-container { /*sessões*/
+    margin: auto; /*define automaticamente a margem dos 4 cantos do elemento*/
+}
+.titulo3 { /*comentários do index*/
+margin-left: 15px; /*altera a margem esquerda do elemento*/
+font-size: 20px; /*altera o tamanho da fonte do texto*/
+}
+.input-botao{ /*botões do index*/
+    margin-left: 0px; /*ajusta a margem da esquerda*/
+}
+}
+
+/*MEDIA 375*/
+@media (max-width: 375px){ /*MEDIA COM RESPONSIVIDADE 375*/
+    /*INDEX*/
+.link-header{ /*CAIXA DOS ÍCONES NO HEADER*/
+    display: flex; /*alinha os elementos na horizontal*/
+    flex-flow: row wrap; /*flex em grade*/
+}
+.div-rodape{ /*DIVISÃO QUE CONTROLA O RODAPÉ TOTAL*/
+    display: block; /*alinha os elementos na vertical*/
+}
+}
+
+/*MEDIA 1366px*/
+@media (max-width: 1366px) { /*MEDIA COM RESPONSIVIDADE 1366*/}
+
+    /*INDEX*/
+.sugestao-container img{ /*IMAGENS DAS SECTIONS DO INDEX*/
+    margin-left: 10px; /*ajusta a margem da esquerda*/
+}
+.input-botao{ /*BOTÕES DO INDEX*/
+margin-left: 67px; /*ajusta a margem da esquerda*/
+margin-bottom: 10px; /*ajusta a margem de baixo*/
+}
+.link-header{ /*ICONES DO HEADER NO INDEX*/
+gap: 0px; /*dá um espaçamento entre os itens*/
+    margin-left: 10px;
+}
+.input-botao{ /*BOTÕES DO INDEX*/
+margin-left: 67px;
+margin-bottom: 10px;
+}
+.link-header{ /*ICONES DO HEADER NO INDEX*/
+gap: 0px;
+
+}
+/*MENUS*/
+.ingredientes{ /*PARÁGRAFOS DOS MENUS*/
+margin: 0px; /*ajusta as margens dos 4 lados*/
+margin-left: 550px; /*ajusta a margem da esquerda*/
+}
+.div-container img { /*IMAGENS DAS SECTIONS DOS MENUS*/
+margin-left: 5px; /*ajsuta as margens da esquerda*/
+}
+
+.div-h2 {
+    color: black;
+    font-size: 70px;
+}

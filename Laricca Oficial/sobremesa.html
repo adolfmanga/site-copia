@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-<meta name="description" content="Programador Front-End, Senai.">
-<meta name="keywords" content="HTML, CSS, JavaScript, Senai">
-<meta name="author" content="william araujo, francisco neto, vitor emanuel e "> 
-<title>Laricca - Bebidas</title>
-<link rel="shortcut icon" href="banner-removebg-preview.icon.ico" type="image/x-icon">  
-<!--<link> cria um vinculo com um arquivo através do atributo href, e o atributo rel é o tripo de relação do arquivo-->
-<link href="css/style.css" rel="stylesheet">
-<!--<link> cria um vinculo com um arquivo através do atributo src-->
-<script src="js/script.js"></script>
-</head>
-<!--CORPO-->
-<body class="corpo">
-            <!--Cabeçalho-->
-            <header class="topo-do-site">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+        <meta name="description" content="Programador Front-End, Senai.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Senai">
+        <meta name="author" content="william araujo, francisco neto, vitor emanuel e Kevin David"> 
+        <title>Laricca - Página Inicial</title>
+        <link rel="shortcut icon" href="banner-removebg-preview.icon.ico" type="image/x-icon">  
+        <!--<link> cria um vinculo com um arquivo através do atributo href, e o atributo rel é o tripo de relação do arquivo-->
+        <link href="css/style.css" rel="stylesheet">
+        <!--<link> cria um vinculo com um arquivo através do atributo src-->
+        <script src="js/script.js"></script>
+    </head>
+     <!--CORPO-->
+   <body class="corpo">
+    <!--Cabeçalho-->
+    <header class="topo-do-site">
+        
+        <div class="banner-header">
+        <img src="img/banner1.png">
+        </div>
+          
+        <div class="lista-header">
 
-                <!--titulo-->
-                     <img src="img/banner.png">
-                    
-            </header>
+        <li class="lista">
+            <a href="sobre.html"><img src="img/icons8-balão-de-fala-50.png" alt="icons8-balão-de-fala"></a>
+            <div class="stronger-quem">
+                 <strong class="links-lista" >Quem somos</strong>
+            </div>
+        </li>
+
+        <li class="lista">
+            <a href="contato.html"><img src="img/user.png"></a>
+            <div class="stronger-contato">
+                <strong class="links-lista">Contato</strong>
+            </div>
+        </li>
+
+        <li class="lista">
+            <a href="carrinho.html"><img src="img/bolsa-de-compras.png"></a>
+            <div class="stronger-carrinho">
+                <strong class="links-lista">Carrinho</strong>
+            </div>
+        </li> 
+       </div>         
+    </header>
     
             <div class="link-header">
                 
@@ -53,20 +77,7 @@
                         <strong class="links-lista" >Bebidas</strong>
                     </div>
                 </li>
-                  
-                <li class="lista">
-                    <a href="sobremesa.html"><img src="img/iogurte-congelado.png" alt="iogurte-congelado"></a>
-                    <div class="stronger-sobremesa">
-                        <strong class="links-lista" >Sobremesas</strong>
-                    </div>
-                </li>
-
-                <li class="lista">
-                    <a href="carrinho.html"><img src="img/bolsa-de-compras.png"></a>
-                    <div class="stronger-home">
-                       <strong class="links-lista">Carrinho</strong>
-                    </div>
-                    </li>
+        
             </div>  
 
         <!--Principal-->
@@ -143,13 +154,13 @@
                         <hr class="hr">
                         <div class="div-container">
                             <img src="img/cacau de chocolate.jpg" alt="suco">
-                            <strong class="descricao-menu">Cacau</strong>
+                            <strong class="descricao-menu">Ovo de Páscoa</strong>
                     <!--<div class="button-input">-->
                         <span>R$19,90</span>
                             <input class="input"  value="" type="number" min="0">
                                 <button class="botao"  type="button" value="adicionar">Adicionar</button>
                                 </div>
-                               <p class="ingredientes">Kit kat e Ovo de Páscoa</strong>
+                               <p class="ingredientes">Kit kat e chocolate</strong>
 
                                 <!--IMAGEM 7-->
                                 <hr class="hr">
@@ -203,38 +214,51 @@
 
            
            
-
-</body>
-    <!--rodapé-->
-    <footer class="rodape">
-        <div class="rodape-container">  
-            <!--<div class="contato-rodape">-->
-                    <h3 class="titulo3">CONTATE-NOS</h3>
-                <p>Email: atendimento@fiepi.com.br</p>
-                <p>SAC: (86) 3322-9466</p>
-                <p>Telefone: (86) 3321-2640</p>
-            <!--</div>-->
-
-            <!--<div class="endereco-rodape">-->
-           
-                <h3 class="titulo3">ENDEREÇO</h3>
-                <p> Av. Cap. Claro, 199 - Centro, Parnaíba - PI, 64200-500</p>
-            
-
-            <!--<-- class="div-rodape">-->
-                     <div class="rede-social"></div>
-                    <h3 class="titulo3">REDES SOCIAIS</h3>
-                <a href="https://twitter.com"> <img src="img/icons8-twitter.svg" alt="logo do twitter"></a>
-                <a href="facebook.com"> <img src="img/icons8-facebook-novo.svg" alt="logo do facebook"></a>    
-                <a href="github.com"> <img class="svg-rodape" src="img/icons8-instagram.svg"></a>
-                <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5586995004221&e=AT0wrP1ypbs6jsjcUIg-bGUPP6nML9J0pMXDIO3IaleKEQ1LEhjap_Y5LCVMmarO0Um4h8PQEizFlx5CjzJ92LG5xkazQoEC"> <img class="svg-rodape" src="img/icons8-whatsapp.svg"></a>
-                <a href="github.com"> <img class="svg-rodape" src="img/icons8-github (1).svg"></a>
+        </main>
+        <footer class="rodape">
+            <hr>
+                <div class="div-rodape">
+                    <ul class="rodape-lista">
+                    <h3 class="titulo3-rodape">CONTATE-NOS</h3>
+                    <p class="paragrafo-list">Email: atendimento@fiepi.com.br</p>
+                    <p class="paragrafo-list">SAC: (86) 3322-9466</p>
+                    <p class="paragrafo-list">Telefone: (86) 3321-2640</p>
+                <!--</div>-->
+                    </ul>
+                
+                    <ul class="rodape-lista2">
+                    <h3 class="titulo3-rodape">Endereço do local</h3>
+                    <p class="paragrafo-list">Endereço: Av. Cap. Claro, 199 - Centro, Parnaíba - PI</p>
+                    </ul>
+        
+                    <ul class="rodape-lista3">
+                        <h3 class="titulo3-rodape">Formas de pagamento</h3>
+                        <p class="paragrafo-list">Formas de pagamento</p>
+                    <div class="rodape-cartao">
+                        <li>
+                            <img src="img/icons8-foto.svg">
+                        </li>
+                        <li>
+                            <img src="img/icons8-mastercard.svg">
+                        </li>
+                        <li>
+                            <img src="img/icons8-visa.svg">
+                        </li>
                     </div>
-           
-        </div>
-        <p class="paragrafo-rodape"><strong>Copyright © 2024 Laricca - todos os direitos reservados</strong></p>
-    </footer>
-
-
-
+                        </ul>
+                
+                    <ul class="rodape-lista4">
+                            <h3 class="titulo3-rodape">REDES SOCIAIS</h3>
+                        <p class="siga-a-gente">Siga a gente :</p>
+                            <a href="https://twitter.com"> <img src="img/icons8-twitter.svg" alt="logo do twitter"></a>
+                            <a href="https://m.facebook.com/story.php?story_fbid=pfbid0FkU41bcDiEJ8r9y5i47YE6kv7bPbeBU4LQjB1mD3c7coz2vakRR8L4oFBSbPRRj2l&id=725561334210327&locale=pl_PL"> <img src="img/icons8-facebook-novo.svg" alt="logo do facebook"></a>    
+                            <a href="github.com"> <img src="img/icons8-instagram.svg"></a>
+                            <a href="https://www.whatsapp.com/?lang=pt_BR"> <img class="svg-rodape" src="img/icons8-whatsapp.svg"></a>
+                    </ul>       
+            </div>
+            <hr>
+            <p class="paragrafo-rodape"><strong>Copyright © 2024 Laricca - todos os direitos reservados</strong></p>
+        </footer> 
+        
+    </body>
 </html>

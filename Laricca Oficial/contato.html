@@ -17,12 +17,12 @@
     <!--CORPO-->
     <body class="corpo">
         <!--Cabeçalho-->
-        
         <header class="topo-do-site">
+                
 
             <!--titulo-->
-            <img src="img/banner.png">
-                            
+            <img src="img/banner1.png">
+                    
         </header>
         <div class="link-header">
                         
@@ -60,50 +60,42 @@
                      <strong class="links-lista" >Sobremesas</strong>
                 </div>
             </li>
-
-            <li class="lista">
-                <a href="sobre.html"><img src="img/icons8-balão-de-fala-50.png" alt="icons8-balão-de-fala"></a>
-                <div class="stronger-quem">
-                     <strong class="links-lista" >Quem somos</strong>
-                </div>
-            </li>
-
-            <li class="lista">
-                <a href="contato.html"><img src="img/user.png"></a>
-                <div class="stronger-contato">
-                    <strong class="links-lista">Contato</strong>
-                </div>
-            </li>
-
-            <li class="lista">
-                <a href="carrinho.html"><img src="img/bolsa-de-compras.png"></a>
-                <div class="stronger-carrinho">
-                    <strong class="links-lista">Carrinho</strong>
-                </div>
-            </li> 
-                    
+               
         </div>
 
         <main>
             <form class="contact">
 
-                <h2 class="title-median">Contato</h2>
-                <p class="contact-text">Os campos com * são de preenchimento obrigatório!</p>
+                <h2 class="title">Contato</h2>
+                <p class="text">Os campos com * são de preenchimento obrigatório!</p>
             
                 <!--Corpo do formulario-->
             
                 <!--Campo Nome-->
                 <label class="contact-label">
-                    *Nome
+                   <strong>*Nome</strong>
                     <input type="text" class="contact-field" required>
                 </label>
                 <!--Campo Email-->
                 <label class="contact-label">
-                    *E-mail
+                    <strong>*E-mail</strong>
                     <input type="email" class="contact-field" required>
                 </label>
-                <button>Enviar</button>
+                <label class="contact-label">
+                    <strong>*Assunto</strong>
+                    <select class="contact-field">
+                        <option>Dúvidas</option>
+                        <option>Críticas</option>
+                        <option>Sugestões</option>
+                    </select>
+                </label>
                 
+                <label class="contact-label">
+                    <strong>*Mensagem</strong>
+                    <textarea required class="contact-field"></textarea>
+
+                </label>
+                <button class="button-label">Enviar</button>
             </form>
 
 
@@ -111,29 +103,49 @@
 
 
         <footer class="rodape">
-            <div class="rodape-container">  
-                <!--<div class="contato-rodape">-->
-                <h3 class="titulo3">CONTATE-NOS</h3>
-                <p>Email: atendimento@fiepi.com.br</p>
-                <p>SAC: (86) 3322-9466</p>
-                <p>Telefone: (86) 3321-2640</p>
+            <hr>
+                <div class="div-rodape">
+                    <ul class="rodape-lista">
+                    <h3 class="titulo3-rodape">CONTATE-NOS</h3>
+                    <p class="paragrafo-list">Email: atendimento@fiepi.com.br</p>
+                    <p class="paragrafo-list">SAC: (86) 3322-9466</p>
+                    <p class="paragrafo-list">Telefone: (86) 3321-2640</p>
                 <!--</div>-->
+                    </ul>
                 
-                <!--<div class="endereco-rodape">-->
-                        
-                <h3 class="titulo3">ENDEREÇO</h3>
-                <p> Av. Cap. Claro, 199 - Centro, Parnaíba - PI, 64200-500</p>
+                    <ul class="rodape-lista2">
+                    <h3 class="titulo3-rodape">Endereço do local</h3>
+                    <p class="paragrafo-list">Endereço: Av. Cap. Claro, 199 - Centro, Parnaíba - PI</p>
+                    </ul>
+        
+                    <ul class="rodape-lista3">
+                        <h3 class="titulo3-rodape">Formas de pagamento</h3>
+                        <p class="paragrafo-list">Formas de pagamento</p>
+                    <div class="rodape-cartao">
+                        <li>
+                            <img src="img/icons8-foto.svg">
+                        </li>
+                        <li>
+                            <img src="img/icons8-mastercard.svg">
+                        </li>
+                        <li>
+                            <img src="img/icons8-visa.svg">
+                        </li>
+                    </div>
+                        </ul>
                 
-                <!--<-- class="div-rodape">-->
-                <div class="rede-social"></div>
-                    <h3 class="titulo3">REDES SOCIAIS</h3>
-                    <a href="https://twitter.com"> <img src="img/icons8-twitter.svg" alt="logo do twitter"></a>
-                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid0FkU41bcDiEJ8r9y5i47YE6kv7bPbeBU4LQjB1mD3c7coz2vakRR8L4oFBSbPRRj2l&id=725561334210327&locale=pl_PL"> <img src="img/icons8-facebook-novo.svg" alt="logo do facebook"></a>    
-                    <a href="github.com"> <img src="img/icons8-instagram.svg"></a>
-                    <a href="https://www.whatsapp.com/?lang=pt_BR"> <img class="svg-rodape" src="img/icons8-whatsapp.svg"></a>
-                        
-                </div>
-                <p class="paragrafo-rodape"><strong>Copyright © 2024 Laricca - todos os direitos reservados</strong></p>
-        </footer>
+                    <ul class="rodape-lista4">
+                            <h3 class="titulo3-rodape">REDES SOCIAIS</h3>
+                        <p class="siga-a-gente">Siga a gente :</p>
+                            <a href="https://twitter.com"> <img src="img/icons8-twitter.svg" alt="logo do twitter"></a>
+                            <a href="https://m.facebook.com/story.php?story_fbid=pfbid0FkU41bcDiEJ8r9y5i47YE6kv7bPbeBU4LQjB1mD3c7coz2vakRR8L4oFBSbPRRj2l&id=725561334210327&locale=pl_PL"> <img src="img/icons8-facebook-novo.svg" alt="logo do facebook"></a>    
+                            <a href="github.com"> <img src="img/icons8-instagram.svg"></a>
+                            <a href="https://www.whatsapp.com/?lang=pt_BR"> <img class="svg-rodape" src="img/icons8-whatsapp.svg"></a>
+                    </ul>       
+            </div>
+            <hr>
+            <p class="paragrafo-rodape"><strong>Copyright © 2024 Laricca - todos os direitos reservados</strong></p>
+        </footer> 
+        
     </body>
 </html>
