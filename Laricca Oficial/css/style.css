@@ -657,7 +657,7 @@ font-size: 20px; /*altera o tamanho da fonte do texto*/
 }
 
 /*MEDIA 1366px*/
-@media (max-width: 1366px) { /*MEDIA COM RESPONSIVIDADE 1366*/}
+@media (max-width: 1366px) { /*MEDIA COM RESPONSIVIDADE 1366*/
 
     /*INDEX*/
 .sugestao-container img{ /*IMAGENS DAS SECTIONS DO INDEX*/
@@ -800,4 +800,5 @@ background-color: var(--white);
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
 background-color: var(--white);
+}
 }
