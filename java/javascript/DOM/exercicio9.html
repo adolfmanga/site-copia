@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Javascript</title>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<style>
+body {
+background-color: blue;
+color: yellowgreen;
+font: normal 18pt "Arial";
+text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Entendendo o DOM</h1>
+
+<p>Postando aqui os resultados</p>
+<p>aprendendo a usar o <strong>DOM</strong> em javascript</p>
+<!--<div id= "esg">Clique aqui!!!</div>-->
+<!--<div name = "msg">Clique aqui!!!</div>-->
+<div class="msg">Clique aqui!!!</div>
+<!--<div id= "msg">Clique aqui!!!</div>-->
+<script>
+
+//exercicio9//
+
+
+//window.document.write('Veja o poder do DOM') //exibe um texto no HTML
+//window.document.write(window.document.charset) //mostra o mapa de caractere
+//window.document.write(window.document.URL) //exibe o endereço do site
+  
+
+//exercicio9_1//
+
+
+//var p1 = window.document.getElementsByTagName('p')[1] 
+//var p1 = window.document.getElementsByTagName('p')[0] 
+//window.document.write('Esse é o texto: ' + p1.innerText)
+//p1.style.color = "black"
+
+
+//exercicio9_2//
+
+
+//var corpo = window.document.body
+//corpo.style.background = "black"
+
+
+//exercicio9_3//
+
+
+//window.alert(p1.innerText) //retorna somente o texto
+//window.alert(p2.innerhtml) //não funciona as tagas HTML ele mostra os textos
+
+
+//exercicio9_4//
+
+
+//var d = window.document.getElementById('esg')
+//d.style.background = 'red'
+//d.style.color = 'black'
+//d.innerText = 'estou aguardando...'
+
+
+//exercicio9_5//
+
+
+//var d = window.document.getElementsByName('msg')[0]
+//d.style.background = 'red'
+//d.style.color = 'black'
+//d.innerText = 'estou aguardando...'
+
+
+//exercicio9_6//
+
+
+//var d = window.document.getElementsByClassName('msg')[0]
+//d.style.background = 'red'
+//d.style.color = 'black'
+//d.innerText = 'estou aguardando...'
+
+
+//exercicio9_7//
+
+
+var d = window.document.querySelector('div.msg')
+d.style.backgroundColor = 'yellow'
+
+
+
+
+</script>
+ 
+
+
+
+
+
+</body>
+</html>

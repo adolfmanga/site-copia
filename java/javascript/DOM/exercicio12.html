@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando números</title>
+
+<style>
+
+    body {
+        font: normal 18pt Arial;
+    }
+
+input {
+    font: normal 18pt Arial;
+    width: 200px
+}
+
+div#res {
+    margin-top: 20px
+}
+
+</style>
+</head>
+<body>
+    
+<span>N1</span>
+<input type="number" name="num1" id="num1">
+<br>
+<input type="button" value="quadrado" onclick="Quadrado()"><br>
+<input type="button" value="cubo" onclick="cubo()"><br>
+<input type="button" value="raiz" onclick="raizquadrada()"><br>
+
+<span>N2</span>
+<input type="number" name="num2" id="num2">
+<input type="button" value="subtrair" onclick="subtrair()">
+<div id="res">resultado</div>
+<br>
+
+<script>
+var num1 = window.document.getElementById('num1')
+var num2 = window.document.getElementById('num2')
+
+function Quadrado() {
+var n1 = Number(num1.value)
+var q = n1 * n1
+var res = window.document.getElementById('res')
+res.innerHTML = `${n1} elevado ao quadrado é: ${q}`
+}
+
+function Cubo() {
+var n1 = Number(num1.value).value
+var c = n1 **3
+var res = window.document.getElementById('res')
+res.innerHTML = `${n1} ^3 é: ${c}`
+}
+
+function Raiz() {
+var tn1 = window.document.getElementById('txtn1')
+var tn2 = window.document.querySelector('input#txtn1')
+var n1 = Number(tn1.value).value
+var n2 = Number(tn2.value)
+var s = n1 ** (1/2)
+var res = window.document.getElementById('res')
+res.innerHTML = `${n1} a raiz quadrada é: ${s}`
+}
+function subtrair() {
+var tn1 = window.document.getElementById('txtn3')
+var tn2 = window.document.querySelector('input#txtn4')
+var n1 = Number(tn1.value)
+var n2 = Number(tn2.value)
+var s = n1 - n2
+var res1 = window.document.getElementById('res1')
+res1.innerHTML = `A soma entre ${n1} - ${n2} é igual a: ${s}`
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
