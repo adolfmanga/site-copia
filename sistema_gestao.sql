@@ -111,8 +111,11 @@ update produtos set quantidade = '09' where id = 1;
 update produtos set quantidade = '07' where id = 2; 
 update produtos set quantidade = '04' where id = 3; 
 
-select * from estoque order by quantidade_disponivel >= 10;
+select * from  order by quantidade_disponivel >= 10;
 select quantidade_disponivel from estoque order by quantidade_disponivel < 10;
+
+SELECT * FROM pedidos WHERE pedidos_realizados BETWEEN '2022-01-01' AND '2022-12-31'; 
+
 
 update estoque set quantidade_disponivel = '8' where produto_id = 1;
 
