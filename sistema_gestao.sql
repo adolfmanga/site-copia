@@ -2,6 +2,7 @@ create database sistema_gestao;
 
 use sistema_gestao;
 
+show databases;
 -- 2. Criação de Tabelas
 
 create table clientes (id int primary key not null auto_increment, nome varchar (45), telefone varchar (15), data_nascimento date,
@@ -12,7 +13,7 @@ create table pedidos (id int primary key, cliente_id int, produto varchar (100),
 
 create table produtos (id int primary key, nome varchar (100), preco decimal (10,2));
 
-create table estoque(produto_id int, quantidade_disponivel int);
+create table estoque(produto_id int primary key, quantidade_disponivel int);
 
 -- 3. Inserção de Dados
 
@@ -33,9 +34,10 @@ INSERT INTO produtos (id, nome, preco) VALUES
 (3, 'Produto C', 150.75);
 
 INSERT INTO estoque (produto_id, quantidade_disponivel) VALUES
-(1, 50),
-(2, 20),
-(3, 10);  
+(1, 7),
+(2, 9),
+(3, 10),
+(4, 12);  
 
 -- 4. Operações CRUD
 
@@ -68,8 +70,8 @@ delete from pedidos where id = 1;
 -- Insira múltiplos produtos no estoque de uma só vez.
 INSERT INTO estoque (produto_id, quantidade_disponivel) VALUES
 (4, 10),
-(5, 40),
-(6, 70);
+(5, 5),
+(6, 9);
 
 -- Atualize o preço de todos os produtos com um aumento de 10%.
 
@@ -79,9 +81,51 @@ update produtos set preco = preco * 1.1 where id = 3;
 
 alter table produtos modify column id int auto_increment primary key;
 
+-- 6. Consultas Específicas
+
+-- Encontrar clientes cujo nome começa com 'A'.
+
+select nome from clientes where nome like 'A%';
+
+-- Listar pedidos feitos em um intervalo de datas.
+
+INSERT INTO pedidos (id, cliente_id, produto, quantidade) VALUES
+
+(1, 1, 'produto A', 10), (3, 3, 'produto C', 30);
+
+update pedidos set pedidos_realizados = '2024-12-09' where id = 1;
+update pedidos set pedidos_realizados = '2022-09-01' where id = 2;
+update pedidos set pedidos_realizados = '2021-07-29' where id = 3;
+
+select * from pedidos where pedidos_realizados between '2021' And '2024';
+
+-- Ordenar produtos pelo preço, do mais caro ao mais barato.
+
+select * from produtos order by preco desc;
+
+-- Buscar produtos com quantidade disponível menor que 10.
+
+ALTER TABLE produtos ADD quantidade int;
+
+update produtos set quantidade = '09' where id = 1; 
+update produtos set quantidade = '07' where id = 2; 
+update produtos set quantidade = '04' where id = 3; 
+
+select * from estoque order by quantidade_disponivel >= 10;
+select quantidade_disponivel from estoque order by quantidade_disponivel < 10;
+
+update estoque set quantidade_disponivel = '8' where produto_id = 1;
+
+alter table estoque modify column produto_id int primary key;
+
 select * from clientes;
 select * from produtos;
+
 desc produtos;
+
+ALTER TABLE pedidos ADD pedidos_realizados date;
+
+delete from estoque where produto_id = 4;
 
 select * from pedidos;
 select * from estoque;
