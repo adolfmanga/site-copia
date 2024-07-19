@@ -89,6 +89,8 @@ select nome from clientes where nome like 'A%';
 
 -- Listar pedidos feitos em um intervalo de datas.
 
+SELECT * FROM pedidos WHERE pedidos_realizados BETWEEN '2022-01-01' AND '2022-12-31';
+
 INSERT INTO pedidos (id, cliente_id, produto, quantidade) VALUES
 
 (1, 1, 'produto A', 10), (3, 3, 'produto C', 30);
@@ -97,29 +99,18 @@ update pedidos set pedidos_realizados = '2024-12-09' where id = 1;
 update pedidos set pedidos_realizados = '2022-09-01' where id = 2;
 update pedidos set pedidos_realizados = '2021-07-29' where id = 3;
 
-select * from pedidos where pedidos_realizados between '2021' And '2024';
-
 -- Ordenar produtos pelo preço, do mais caro ao mais barato.
 
 select * from produtos order by preco desc;
 
 -- Buscar produtos com quantidade disponível menor que 10.
 
-ALTER TABLE produtos ADD quantidade int;
+select quantidade_disponivel as 'menores que 10 são:' from estoque where quantidade_disponivel <= 10; 
 
+update estoque set quantidade_disponivel = '8' where produto_id = 1;
 update produtos set quantidade = '09' where id = 1; 
 update produtos set quantidade = '07' where id = 2; 
 update produtos set quantidade = '04' where id = 3; 
-
-select * from  order by quantidade_disponivel >= 10;
-select quantidade_disponivel from estoque order by quantidade_disponivel < 10;
-
-SELECT * FROM pedidos WHERE pedidos_realizados BETWEEN '2022-01-01' AND '2022-12-31'; 
-
-
-update estoque set quantidade_disponivel = '8' where produto_id = 1;
-
-alter table estoque modify column produto_id int primary key;
 
 select * from clientes;
 select * from produtos;
